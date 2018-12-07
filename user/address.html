@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>收货地址管理</title>
+    <link type="image/x-icon" rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../res/mui/css/mui.min.css"/>
+    <link rel="stylesheet" href="../res/fontAwesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/user.css"/>
+</head>
+<body>
+<div class="cz_layout bgg">
+    <header class="cz_topBar">
+        <a href="javascript:history.back();" class="icon_back fa fa-arrow-left"></a>
+        <span class="title">收货地址管理</span>
+    </header>
+    <div class="cz_container">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-red">删除</a>
+                </div>
+                <a href="addressManage.html" class="mui-navigate-right mui-slider-handle">
+                    <div class="delivery">邮编：<span>100000</span>&nbsp;收货人：<span>黄晓明</span></div>
+                    <div class="address">北京市海淀区西三旗街道经验龙办公楼传智播客教育科技有限公司</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-red">删除</a>
+                </div>
+                <a href="addressManage.html" class="mui-navigate-right mui-slider-handle">
+                    <div class="delivery">邮编：<span>100000</span>&nbsp;收货人：<span>黄晓明</span></div>
+                    <div class="address">北京市海淀区西三旗街道经验龙办公楼传智播客教育科技有限公司</div>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-red">删除</a>
+                </div>
+                <a href="addressManage.html" class="mui-navigate-right mui-slider-handle">
+                    <div class="delivery">邮编：<span>100000</span>&nbsp;收货人：<span>黄晓明</span></div>
+                    <div class="address">北京市海淀区西三旗街道经验龙办公楼传智播客教育科技有限公司</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer class="cz_tabs">
+        <a class="tab_home fa fa-home" href="../index.html"><span>首页</span></a>
+        <a class="tab_cate fa fa-bars" href="../cate.html"><span>分类</span></a>
+        <a class="tab_cart fa fa-shopping-cart" href="../cart.html"><span>购物车</span></a>
+        <a class="tab_user fa fa-user" href="../user/index.html"><span>会员中心</span></a>
+    </footer>
+</div>
+<script src="../res/mui/js/mui.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<!-- 引入模板引擎 -->
+<script src=""></script>
+<script>
+    //获取地址列表
+    // 页面加载时发送请求，通过接口，
+    $.ajax({
+        url:'/api/address/queryAddress',
+        type:'get',
+        success:function(data){
+            console.log(data)
+            //如果没有登录
+            if(data.error){
+                location.href = '/user/login.html';
+                return
+            }
+            //登陆后用模板引擎展示到页面
+
+        }
+    })
+
+    //添加一个新增地址按钮，点击跳转到addAddress.html
+    // 获取表单数据，发ajax，处理结果-如果添加成功，自己跳转到address.html
+
+
+
+
+    // 添加一个编辑地址页面，点击原有地址进入编辑页面
+    // 页面加载时发送ajax请求，获取原有数据，
+    // 点击保存的时候获取修改的地址信息，发送ajax
+
+
+
+    // 删除功能，
+    // 点击按钮，发送ajax,删除，并刷新页面
+</script>
+</body>
+</html>
