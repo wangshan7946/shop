@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 弹性布局  可以参考下面详解*/
+    /* http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool */
+    .parent {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+      display: flex;
+      /* justify-content属性定义了项目在主轴上的对齐方式。 水平居中 */
+      justify-content: center;
+      /* align-items属性定义项目在交叉轴上如何对齐。 垂直居中*/
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    /* 设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。 */
+
+    .child {
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child">Demo</div>
+  </div>
+</body>
+
+</html>

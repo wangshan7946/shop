@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .parent {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+      text-align: center;
+      /* display:table-cell属性指让标签元素以表格单元格的形式呈现 */
+      display: table-cell;
+
+      /* vertical-align 属性设置元素的垂直对齐方式。 */
+      /* middle 把此元素放置在父元素的中部。 */
+      vertical-align: middle;
+      /* padding值可以用  margin值无效果 */
+      /* padding-top: 100px; */
+      /* margin-left: 100px; */
+      margin: 0 auto;
+
+    }
+
+    .child {
+      /* margin-left: 100px; */
+      /* padding-left: 100px; */
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <!-- 要是面试官问的垂直居中是在 不脱标的情况下可以用 
+  table-cell middle center组合使用 -->
+    <div class="child">Demo</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .parent {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+      margin: 0 auto;
+      /* 解决办法 1：为父盒子设置1像素的上边框,颜色一样，但是会撑大父盒子，所以父盒子高度减1*/
+      border-top: 1px solid pink;
+      /* 解决方法 2：为子盒子设置1像素的上内边距，也会撑大子盒子，所以子盒子高度减1 */
+      /* padding-top: 1px; */
+      /* 解决方法 3：父盒子设置overflow：hidden ，触发bfc ,不会撑大盒子*/
+      /* overflow: hidden; */
+
+    }
+
+    .child {
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+      margin-left: 100px;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child">Demo</div>
+  </div>
+</body>
+
+</html>

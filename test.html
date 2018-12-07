@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .parent {
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .child {
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+      position: absolute;
+      /* top: 50%;left: 50%;， 是以左上角为原点，故不处于中心位置 */
+      left: 50%;
+      top: 50%;
+      /* translate(-50%,-50%) 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置 */
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <div class="child">Demo</div>
+  </div>
+</body>
+
+</html>
